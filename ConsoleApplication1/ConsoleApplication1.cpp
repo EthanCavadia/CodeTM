@@ -25,7 +25,7 @@ void SaveToJson(multimap<int, values>::iterator list)
 		
 		_value["x"][list->first] = list->second.first;
 		_value["y"][list->first] = list->second.second;
-		_value["a"][list->first] = list->second.second / list->second.first;
+		_value["a"][list->first] = list->second.second / list->second.first; //Binet formula
 	}
 	file.open(R"(..\data.json)", std::ios::out);
 	
